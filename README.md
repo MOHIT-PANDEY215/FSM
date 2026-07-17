@@ -61,6 +61,6 @@ python simulator/udp_simulator.py
 
 ### Step 3: Launch the live Dashboard
 
-**Open inex.html file to view the dashboard**
+**Open index.html file to view the dashboard**
 
 
