@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSMCore - Live HARQ Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .dashboard { display: flex; gap: 20px; justify-content: center; }
+        .user-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .state-badge {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .log { margin-top: 30px; background: #222; color: #0f0; padding: 15px; border-radius: 5px; height: 200px; overflow-y: auto; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>5G MAC - Live HARQ Simulation</h1>
+        <p>Global Time Slot: <strong id="global-slot">0</strong></p>
+    </div>
+
+    <div class="dashboard">
+        <!-- User 0 Card -->
+        <div class="user-card" id="card-0">
+            <h3>User 0</h3>
+            <div class="state-badge" id="state-0">Idle</div>
+            <p>Retries: <span id="retries-0">0</span></p>
+        </div>
+
+        <!-- User 1 Card -->
+        <div class="user-card" id="card-1">
+            <h3>User 1</h3>
+            <div class="state-badge" id="state-1">Idle</div>
+            <p>Retries: <span id="retries-1">0</span></p>
+        </div>
+    </div>
+
+    <div class="log" id="event-log">
+        <!-- Logs will stream here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
